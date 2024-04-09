@@ -1,0 +1,192 @@
+@import '../../../color-variables.scss';
+
+.back{
+  width: 100%;
+  height: 100vh;
+  background: url('../../assets/backgrounds/bg-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2em;
+    background-color: transparent;
+  }
+
+  header, .text, footer{
+    width: 327px;
+  }
+
+  header{
+    height: 64px;
+    background-color: $dark-10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    gap: 10px;
+
+    .logos{
+      height: 24px;
+      display: flex;
+      gap: 56px;
+    }
+
+    .nav-bar{
+      display: none;
+    }
+  }
+
+  .text{
+    color: $dark-20;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    p:nth-child(1){
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+    }
+
+    p:nth-child(3){
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    p:nth-child(4){
+      text-transform: uppercase;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    button{
+      width: 239px;
+      height: 57px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $dark-20;
+      padding: 16px 56px;
+      background-color: $brand-color;
+      color: $dark-20;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+  }
+
+  footer{
+
+    p{
+      color: $dark-20;
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+
+  .back{
+    background: url('../../assets/backgrounds/bg-tablet.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    header{
+      width: 704px;
+      height: 80px;
+      padding: 0 40px;
+
+      .logos{
+        gap: 40px;
+      }
+
+      .nav-bar{
+        width: 303px;
+        display: flex;
+        justify-content: space-between;
+
+        a{
+          text-transform: uppercase;
+          color: $dark-20;
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .text{
+      width: 520px;
+      align-self: flex-start;
+      margin-left: 32px;
+
+      img{
+        width: 400px;
+      }
+
+      p:nth-child(1){
+        font-size: 18px;
+      }
+
+      p:nth-child(3){
+        font-size: 18px;
+      }
+
+      p:nth-child(4){
+        font-size: 32px;
+      }
+    }
+
+    footer{
+      width: 650px;
+
+      p{
+        font-size: 18px;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1000px){
+
+  .back{
+    background: url('../../assets/backgrounds/bg-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: flex-start;
+
+    .container{
+      width: 696px;
+      margin-left: 122px;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px){
+
+  .back{
+    background: url('../../assets/backgrounds/bg-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: flex-start;
+
+    .container{
+      width: 696px;
+      margin-left: 352px;
+    }
+  }
+}
+
